@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1 contenteditable="true" id="name">Your Name</h1>
+    <p contenteditable="true" id="tagline">Student | Developer | Designer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p contenteditable="true" id="aboutText">
+        Write something about yourself here.
+      </p>
+      <img id="profileImage" src="" alt="Profile picture">
+      <input type="file" id="imageUpload" accept="image/*">
+    </section>
+
+    <section id="skills">
+      <h2>My Skills</h2>
+      <ul id="skillList">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+      <input type="text" id="newSkill" placeholder="Enter a skill">
+      <button onclick="addSkill()">Add Skill</button>
+    </section>
+
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div id="projectList">
+        <p>My first project</p>
+      </div>
+      <input type="text" id="newProject" placeholder="Enter project name">
+      <button onclick="addProject()">Add Project</button>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <span contenteditable="true" id="email">yourmail@gmail.com</span></p>
+      <p>Phone: <span contenteditable="true" id="phone">Your phone number</span></p>
+    </section>
+
+    <section>
+      <h2>Portfolio Settings</h2>
+      <label for="backgroundColor">Background Colour:</label>
+      <input type="color" id="backgroundColor" value="#111111">
+
+      <label for="textColor">Text Colour:</label>
+      <input type="color" id="textColor" value="#ffffff">
+
+      <button onclick="savePortfolio()">Save Portfolio</button>
+      <button onclick="downloadPortfolio()">Download Information</button>
+      <button onclick="window.print()">Download as PDF</button>
+      <button onclick="emailPortfolio()">Send through Gmail</button>
+    </section>
+
+    <section>
+      <h2>Ask ChatGPT</h2>
+      <input type="password" id="apiKey" placeholder="Enter your OpenAI API key">
+      <textarea id="aiPrompt" placeholder="Ask ChatGPT something..."></textarea>
+      <button onclick="askChatGPT()">Ask ChatGPT</button>
+      <div id="aiResponse"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 My Personal Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
